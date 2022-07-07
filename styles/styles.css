@@ -59,6 +59,26 @@ input , select , textarea {
     background-color: rgb(19, 56, 90);
 }
 
+.scrollTop {
+    position: fixed;
+    bottom: -60px;
+    right: 15px;
+    background-color: var(--color--1);
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    z-index: 4;
+    transition: 0.3s ease-in;
+}
+.scrollTop.show {
+    bottom: 15px;
+}
 /* Global Styles */
 
 

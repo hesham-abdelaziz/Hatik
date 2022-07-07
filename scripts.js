@@ -9,3 +9,27 @@ menuIcon.addEventListener('click' , () => {
     menuIcon.classList.toggle('toggled')
     linksHolder.classList.toggle('toggled');
 })
+
+
+
+
+// Scroll Top
+let scrollTopBtn = document.querySelector('.scrollTop');
+
+window.addEventListener('scroll' , () =>{
+    if(window.scrollY >= 200){
+        scrollTopBtn.classList.add('show')
+    }
+    else {
+        scrollTopBtn.classList.remove('show')
+
+    }
+    
+})
+
+scrollTopBtn.addEventListener('click' , () => {
+    window.scrollTo({
+        top : 0,
+        behavior : 'smooth'
+    })
+})
