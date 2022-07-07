@@ -44,7 +44,7 @@ ul {
 /* Header Styles */
 nav {
     position: relative;
-    background-image: url('/images/back.jpg');
+    background-image: url('../images/back.jpg');
     background-position:  center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -386,7 +386,7 @@ nav .container .trackBtn:hover {
 .second-section {
     position: relative;
     height: 600px;
-    background-image: url('/images/back-2.jpg');
+    background-image: url('../images/back-2.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -487,7 +487,7 @@ nav .container .trackBtn:hover {
 .fourth-section {
     position: relative;
     height: 350px;
-    background-image: url('/images/back-3.jpg');
+    background-image: url('../images/back-3.jpg');
     background-position:center;
     background-size: cover;
     background-repeat: no-repeat;
