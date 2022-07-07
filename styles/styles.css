@@ -46,6 +46,11 @@ input , select , textarea {
 }
 
 .submitBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    text-decoration: none;
     padding: 10px 40px;
     border: none !important;
     border-radius: 5px;
@@ -55,7 +60,7 @@ input , select , textarea {
 }
 
 .submitBtn:hover {
-    
+    color: #fff;
     background-color: rgb(19, 56, 90);
 }
 
