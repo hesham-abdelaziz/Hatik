@@ -1,3 +1,7 @@
+
+<?php
+echo('hello')
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -126,7 +130,7 @@
             >لطلب الخدمة</p>
         </div>
 
-        <form>
+        <form action="" method="POST">
             <div class="form-group"><label for="name">
                 الأسم
                 <input type="text" name="name" id="name" class="form-control mt-2">
