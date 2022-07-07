@@ -11,6 +11,17 @@ menuIcon.addEventListener('click' , () => {
     linksHolder.classList.toggle('toggled');
 })
 
+let media = window.matchMedia('(min-width : 769px)');
+
+window.addEventListener('resize' , () => {
+    if(media.matches){
+        menuIcon.classList.remove('toggled')
+        linksHolder.classList.remove('toggled');
+    }
+    else {
+
+    }
+})
 
 
 
@@ -37,36 +48,5 @@ scrollTopBtn.addEventListener('click' , () => {
 
 
 
-//Open gmail 
 
-let submitBtn = document.querySelector('.submitBtn')
 
-submitBtn.addEventListener('click' , () => {
-
-    let name = document.getElementById('name')
-    let email = document.getElementById('email')
-    let phone = document.getElementById('phone')
-    let websiteUrl = document.getElementById('website')
-    let contactTime = document.getElementById('contact-time')
-    submitBtn.setAttribute('href' ,
-     `mailto:abosittahesham@gmail.com?subject=طلب خدمة&body=
-    : الإسم  ${name.value} 
-     %0A
-     %0A
-     : البريد الإلكتروني  ${email.value}
-     %0A
-     %0A
-     : الجوال ${phone.value}
-     %0A
-     %0A
-     : رابط الموقع / المتجر الإلكتروني  ${websiteUrl.value}
-     %0A
-     %0A
-     : الوقت المناسب للإتصال بك 
-     %0A
-     %0A
-      ${contactTime.value}
-     %0A
-     `)
-
-})

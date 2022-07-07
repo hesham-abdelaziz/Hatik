@@ -39,6 +39,16 @@ echo('hello')
             background-image: url('images/order.jpg');
         }
 
+        @media (max-width : 768px) {
+          nav {
+            background-position: -200px;
+          }
+        }
+        @media (max-width : 568px) {
+          nav {
+            background-position: -255px 60px;
+          }
+        }
         .contact {
             margin: 30px 0;
             font-size: 20px;
@@ -91,7 +101,7 @@ echo('hello')
             <li><a href="about.html">من نحن</a></li>
             <li><a href="services.html" >الخدمات</a></li>
             <li><a href="request-service.html" class="active">طلب الخدمة</a></li>
-            <li><a href="contact.html">توصل معنا</a></li>
+            <li><a href="contact.html">تواصل معنا</a></li>
           </ul>
         </div>
 
@@ -107,7 +117,7 @@ echo('hello')
           <li><a href="about.html">من نحن</a></li>
           <li><a href="services.html">الخدمات</a></li>
           <li><a href="request-service.html" class="active">طلب الخدمة</a></li>
-          <li><a href="contact.html">توصل معنا</a></li>
+          <li><a href="contact.html">تواصل معنا</a></li>
         </ul>
       </div>
       <div class="container">
@@ -273,3 +283,37 @@ echo('hello')
   crossorigin="anonymous"
 ></script>
 
+
+<script>
+  let submitBtn = document.querySelector('.submitBtn')
+
+submitBtn.addEventListener('click' , () => {
+
+    let name = document.getElementById('name')
+    let email = document.getElementById('email')
+    let phone = document.getElementById('phone')
+    let websiteUrl = document.getElementById('website')
+    let contactTime = document.getElementById('contact-time')
+    submitBtn.setAttribute('href' ,
+     `mailto:abosittahesham@gmail.com?subject=طلب خدمة&body=
+     الإسم : ${name.value} 
+     %0A
+     %0A
+      البريد الإلكتروني : ${email.value}
+     %0A
+     %0A
+     الجوال : ${phone.value}
+     %0A
+     %0A
+      رابط الموقع / المتجر الإلكتروني : ${websiteUrl.value}
+     %0A
+     %0A
+     الوقت المناسب للإتصال بك :
+     %0A
+     %0A
+      ${contactTime.value}
+     %0A
+     `)
+
+})
+</script>
