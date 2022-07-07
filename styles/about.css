@@ -1,0 +1,67 @@
+
+/* Global Styles */
+
+:root{
+    --color--1 : #13385a;
+    --color--2 : #d1d1d1;
+    --color--3 : #b3d342;
+    --color--4 : #00dbd3;
+}
+/* Global Styles */
+
+/* Header Styles */
+nav {
+    position: relative;
+    background-image: url('../images/about.jpg');
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 690px;
+    width: 100%;
+}
+
+
+@media (max-width : 992px) {
+    nav {
+        background-size: cover;
+    }
+}
+
+
+/* Header Styles */
+.container {
+    margin: 50px 0;
+}
+
+.col-6 {
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+
+
+.col-header {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.col-content{
+    position: relative;
+    line-height: 1.8;
+}
+
+.col-content::before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    top: -10px;
+    background-color: var(--color--4);
+}
+
+.row img{
+    width: 88%;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 10px 10px 0px 1px rgb(0 , 0 , 0 ,15%);
+}

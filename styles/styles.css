@@ -37,6 +37,28 @@ ul {
     list-style-type: none;
 }
 
+input , select , textarea {
+    box-shadow: none !important;
+}
+
+.form-group {
+    margin-top: 15px;
+}
+
+.submitBtn {
+    padding: 10px 40px;
+    border: none !important;
+    border-radius: 5px;
+    background-color: rgb(19, 56, 90 , .8);
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+.submitBtn:hover {
+    
+    background-color: rgb(19, 56, 90);
+}
+
 /* Global Styles */
 
 
@@ -168,6 +190,16 @@ max-height: 250px;
     color: #fff;
 }
 
+.header .nav-links ul li a.active{
+    position: relative;
+}
+.header .nav-links ul li a.active::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color--4);
+}
 .header .nav-links ul li a::after{
     content: '';
     position: absolute;
@@ -406,13 +438,16 @@ nav .container .trackBtn:hover {
 }
 
 .btnHolder .moreBtn{
-    color: #fff;
     padding: 15px 40px;
     border: none;
     border-radius: 20px;
     font-weight: 600;
     background-color: rgb(0, 219, 211 , .7);
     transition: 0.3s;
+}
+.btnHolder .moreBtn a {
+    text-decoration: none;
+    color: #fff;
 }
 .btnHolder .moreBtn i {
     margin-right: 7px;
@@ -452,10 +487,10 @@ nav .container .trackBtn:hover {
     content: '';
     position: absolute;
     width: 40px;
-    height: 2px;
+    height: 3px;
     background-color: var(--color--4);
     right: 0;
-    top: -5px;
+    top: -10px;
 }
 /* Second Section */
 

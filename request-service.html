@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="./styles/bootstrap/css/bootstrap.min.css" />
+    <!-- BootStrap -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./styles/fontawesome/css/all.css" />
+    <!-- Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    /> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+
+    <title>Hatik Express</title>
+
+
+    <style>
+
+        nav {
+            background-image: url('images/order.jpg');
+        }
+
+        .contact {
+            margin: 30px 0;
+            font-size: 20px;
+        }
+        .contact .contact-header p {
+            font-weight: 700;
+            font-size: 22px;
+        }
+
+        .social {
+            display: flex;
+        }
+        .social a {
+            text-decoration: none;
+            color: rgb(19, 56, 90);
+            transition: 0.3s ease;
+        }
+        .social a:hover {
+            color: rgb(19, 56, 90 , .7);
+
+        }
+        .social i {
+            display: block;
+            font-size: 50px;
+        }
+        .social i{
+            margin-left: 25px;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <nav>
+      <div class="header-overlay"></div>
+      <div class="header">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/logo.png" alt="" />
+          </a>
+        </div>
+
+        <div class="nav-links">
+          <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="services.html" >الخدمات</a></li>
+            <li><a href="request-service.html" class="active">طلب الخدمة</a></li>
+            <li><a href="contact.html">توصل معنا</a></li>
+          </ul>
+        </div>
+
+        <div class="menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="small-screen-links">
+        <ul>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="about.html">من نحن</a></li>
+          <li><a href="services.html">الخدمات</a></li>
+          <li><a href="request-service.html" class="active">طلب الخدمة</a></li>
+          <li><a href="contact.html">توصل معنا</a></li>
+        </ul>
+      </div>
+      <div class="container">
+        <div class="header-text">
+      
+          <h1 class="name">طلب الخدمة</h1>
+
+      </div>
+    </nav>
+    <!-- Header -->
+
+
+
+    <div class="container" style="margin-top: 35px;">
+        <div class="row">
+      <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+        <div class="col-header">
+            <p
+            style="font-size: 34px; font-weight: 700;"
+            >لطلب الخدمة</p>
+        </div>
+
+        <form>
+            <div class="form-group"><label for="name">
+                الأسم
+                <input type="text" name="name" id="name" class="form-control mt-2">
+            </label>
+        </div>
+            <div class="form-group"><label for="email">
+                البريد الإلكتروني
+                <input type="email" name="email" id="email" class="form-control mt-2">
+            </label>
+        </div>
+            <div class="form-group"><label for="phone">
+                الجوال
+                <input type="tel" name="phone" id="phone" class="form-control mt-2">
+            </label>
+        </div>
+            <div class="form-group"><label for="website">
+                رابط الموقع / المتجر الإلكتروني
+                <input type="text" name="website" id="website" class="form-control mt-2">
+            </label>
+        </div>
+            <div class="form-group"><label for="contact-time">
+                الوقت المناسب للإتصال بك
+                <textarea class="form-control mt-2" name="contact-time" id="contact-time" cols="30" rows="10"></textarea>
+            </label>
+        </div>
+
+        <button type="submit" class="submitBtn mb-md-4 mb-sm-4 mb-4">إرسال</button>
+        </form>
+      </div>
+      <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+        <div class="col-header">
+            <p
+            style="font-size: 34px; font-weight: 700;"
+            >معلومات التواصل</p>
+          </div>
+
+          <div class="contact-methods">
+            <div class="contact">
+                <div class="contact-header">
+                    <p>العنوان</p>
+                </div>
+                <div class="contact-content">
+                    <p>المملكة العربية السعودية - الرياض</p>
+                </div>
+            </div>
+
+            <div class="contact">
+                <div class="contact-header">
+                    <p>البريد الإلكتروني</p>
+                </div>
+                <div class="contact-content">
+                    <p>test@test.com</p>
+                </div>
+            </div>
+            <div class="contact">
+                <div class="contact-header">
+                    <p>جوال</p>
+                </div>
+                <div class="contact-content">
+<p>0537906030 | 0533067760 | 0551010667</p>
+                </div>
+            </div>
+
+
+            <div class="contact">
+                <div class="contact-header">
+                    <p>تابعنا علي</p>
+                </div>
+                <div class="contact-content social">
+                        <a href="#">
+                            <i class="fa-brands fa-facebook"></i> 
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-twitter"></i> 
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-youtube"></i> 
+                        </a>
+                 
+                </div>
+            </div>
+          </div>
+      </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div 
+        style="background-color: #eee;
+         height: 100px;
+         display: flex;
+         align-items: center;
+         margin-top: 15px;">
+          <div class="container" >
+            <p style="font-weight: 600">الشروط و الأحكام</p>
+            <ul style="list-style: disc">
+              <li>
+                <a
+                  style="color: #13385a; text-decoration: none"
+                  href="https://jena.sa/wp-content/uploads/2021/05/users-rights-postal.pdf"
+                  >قواعد حماية حقوق مستفيدي الخدمة البريدية</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="first-header">
+          <div class="container">
+            <div class="contact-info text-center">
+              <p>
+                السعودية | الهاتف: 456456456 | 456456456 | 456456456 البريد الإلكتروني: test@test.com
+              </p>
+              <p>
+                جميع الحقوق محفوظة &copy; 2022 هاتك إكسبريس
+              </p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="second-header">
+          <div class="container">
+            <p class="text-center">
+              الرقم الموحد 456456456 | Toll Free 456456456
+            </p>
+          </div>
+        </div>
+      </footer>
+
+    <!-- Footer -->
+  </body>
+</html>
+
+<script src="scripts.js"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+  crossorigin="anonymous"
+></script>
