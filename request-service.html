@@ -103,7 +103,7 @@ echo('hello')
   </head>
   <body>
 
-    <p class="form-status">asd</p>
+    <p class="form-status"></p>
         <!-- Scroll To Top -->
         <span class="scrollTop">
           <i class="fa-solid fa-arrow-up-long"></i>
@@ -341,7 +341,7 @@ async function handleSubmit(event) {
         if(Object.hasOwn(data , 'errors')) {
       status.classList.add('show');
           status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
-          
+
           setTimeout(() => {
         status.classList.remove('show');
       }, 4000);

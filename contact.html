@@ -71,9 +71,34 @@
         .social i{
             margin-left: 25px;
         }
+        .form-status {
+
+position: fixed;
+z-index: 4;
+right: -260px;
+top: 20px;
+background-color: rgb(19, 56, 90);
+width: 250px;
+height: 60px;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #fff;
+font-weight: 700;
+border-radius: 10px;
+transition: 0.3s ease;
+}
+
+.form-status.show{
+right: 20px;
+}
     </style>
   </head>
   <body>
+    <!-- Form Status -->
+    <p class="form-status"></p>
+
+    <!-- Form Status -->
         <!-- Scroll To Top -->
         <span class="scrollTop">
           <i class="fa-solid fa-arrow-up-long"></i>
@@ -134,35 +159,36 @@
             >لطلب الخدمة</p>
         </div>
 
-        <form>
-            <div class="form-group"><label for="name">
-                الأسم
-                <input type="text" name="name" id="name" class="form-control mt-2">
-            </label>
-        </div>
-            <div class="form-group"><label for="email">
-                البريد الإلكتروني
-                <input type="email" name="email" id="email" class="form-control mt-2">
-            </label>
-        </div>
-            <div class="form-group"><label for="phone">
-                الجوال
-                <input type="tel" name="phone" id="phone" class="form-control mt-2">
-            </label>
-        </div>
-            <div class="form-group"><label for="website">
-                رابط الموقع / المتجر الإلكتروني
-                <input type="text" name="website" id="website" class="form-control mt-2">
-            </label>
-        </div>
-            <div class="form-group"><label for="contact-time">
-                الوقت المناسب للإتصال بك
-                <textarea class="form-control mt-2" name="contact-time" id="contact-time" cols="30" rows="10"></textarea>
-            </label>
-        </div>
+        <form action="https://formspree.io/f/moqrolrg" method="POST" id="contactForm">
+          <div class="form-group"><label for="name">
+              الأسم
+              <input type="text" name="name" id="name" class="form-control mt-2">
+          </label>
+      </div>
+          <div class="form-group"><label for="email">
+              البريد الإلكتروني
+              <input type="email" name="email" id="email" class="form-control mt-2">
+          </label>
+      </div>
+          <div class="form-group"><label for="phone">
+              الجوال
+              <input type="tel" name="phone" id="phone" class="form-control mt-2">
+          </label>
+      </div>
+          <div class="form-group"><label for="website">
+              رابط الموقع / المتجر الإلكتروني (إختياري)
+              <input type="text" name="website" id="website" class="form-control mt-2">
+          </label>
+      </div>
+          <div class="form-group"><label for="contact-time">
+              الوقت المناسب للإتصال بك (إختياري)
+              <textarea class="form-control mt-2" name="contact-time" id="contact-time" cols="30" rows="10"></textarea>
+          </label>
+      </div>
 
-        <button type="submit" class="submitBtn mb-md-4 mb-sm-4 mb-4">إرسال</button>
-        </form>
+        <button type="submit" class="submitBtn" id="submitBtn">إرسال</button>
+      <!-- <a href="mailto:abosittahesham@gmail.com" class="submitBtn mb-md-4 mb-sm-4 mb-4 ">إرسال</a> -->
+      </form>
       </div>
       <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
         <div class="col-header">
@@ -275,3 +301,55 @@
   integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
   crossorigin="anonymous"
 ></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+let form = document.getElementById('contactForm');
+
+async function handleSubmit(event) {
+  event.preventDefault();
+
+  let status = document.querySelector('.form-status');
+  let data = new FormData(event.target);
+  fetch(event.target.action, {
+    method :form.method,
+    body : data ,
+    headers : {
+      'Accept' : 'application/json'
+    }
+  })
+  .then(res => {
+    if(res.ok){
+      status.classList.add('show');
+      status.innerHTML ="شكراَ لإستخدامك خدمتنا";
+      setTimeout(() => {
+        status.classList.remove('show');
+      }, 4000);
+      form.reset()
+    }
+    else {
+      res.json().then(data => {
+        if(Object.hasOwn(data , 'errors')) {
+      status.classList.add('show');
+          status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+          
+          setTimeout(() => {
+        status.classList.remove('show');
+      }, 4000);
+        }
+        else {
+          status.classList.add('show');
+
+          status.innerHTML = "حدث خطأ أثناء الإرسال !"
+          setTimeout(() => {
+        status.classList.remove('show');
+      }, 4000);
+        }
+      })
+    }
+  })
+}
+form.addEventListener("submit", handleSubmit)
+</script>
