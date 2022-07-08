@@ -91,12 +91,12 @@ input , select , textarea {
 /* Header Styles */
 nav {
     position: relative;
-    background-image: url('../images/back.jpg');
-    background-position:  center;
-    background-size: cover;
+    background-image: url('../images/logo.png');
+    background-position: center -150px;
+    background-size: 1400px;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 600px;
+    height: 650px;
     width: 100%;
 }
 
@@ -558,12 +558,24 @@ nav .container .trackBtn:hover {
 
 /* Last Section */
 
+/* Contact Section */
 
+.contact-methods .contact {
+    display: flex;
+}
+.contact-methods .contact i {
+    margin-left: 15px;
+}
+
+.contact-methods .social-contact {
+    flex-direction: column;
+}
+/* Contact Section */
 
 /* Footer */
 
 footer .first-header {
-    height: 180px;
+    height: 250px;
     background-color: #13385a;
     display: flex;
     align-items: center;
@@ -584,20 +596,26 @@ footer .second-header p {
     font-size: 18px;
 }
 
+footer .contact-details span{
+    margin-left: 20px;
+}
+
+footer .footer-social a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 40px;
+}
+footer .footer-social a:not(:last-child){
+    margin-left: 15px;
+
+}
+
 /* Footer */
 
 
 /* Media Query */
 
 
-@media (max-width : 768px) {
-    .last-section  .paying-methods img {
-        width: 400px;
-    }
-    .last-section .section-header p {
-        font-size: 26px;
-    }
-}
 
 @media (max-width : 568px) {
     .last-section  .paying-methods img {
@@ -607,9 +625,7 @@ footer .second-header p {
     
 }
 
-@media (max-width : 768px) {
 
-}
 
 
 @media (max-width : 968px) {
@@ -635,6 +651,17 @@ footer .second-header p {
 
 
 @media (max-width : 768px) {
+    
+    nav {
+        background-position: center -75px;
+    background-size: 1100px;
+    }
+    .last-section  .paying-methods img {
+        width: 400px;
+    }
+    .last-section .section-header p {
+        font-size: 26px;
+    }
     .nav-links {
         display: none;
     }
@@ -674,6 +701,11 @@ footer .second-header p {
 @media (max-width : 568px) {
     .third-section p {
         font-size: 22px;
+    }
+
+    nav {
+        background-position: center 60px;
+    background-size: 700px;
     }
 
 

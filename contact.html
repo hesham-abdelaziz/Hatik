@@ -204,8 +204,8 @@ right: 20px;
           <div class="contact-methods">
             <div class="contact">
                 <div class="contact-header">
-                    <p>العنوان</p>
-                </div>
+                  <i class="fa-solid fa-location-dot"></i>
+                                </div>
                 <div class="contact-content">
                     <p>المملكة العربية السعودية - الرياض</p>
                 </div>
@@ -213,22 +213,23 @@ right: 20px;
 
             <div class="contact">
                 <div class="contact-header">
-                    <p>البريد الإلكتروني</p>
-                </div>
+                  <i class="fa-solid fa-envelope"></i>
+                                </div>
                 <div class="contact-content">
                     <p>test@test.com</p>
                 </div>
             </div>
             <div class="contact">
                 <div class="contact-header">
-                    <p>جوال</p>
-                </div>
+                  <i class="fa-solid fa-phone-flip"></i>
+                                </div>
                 <div class="contact-content">
+                  <p>000-000-00</p>
                 </div>
             </div>
 
 
-            <div class="contact">
+            <div class="contact social-contact">
                 <div class="contact-header">
                     <p>تابعنا علي</p>
                 </div>
@@ -242,6 +243,9 @@ right: 20px;
                         <a href="#">
                             <i class="fa-brands fa-youtube"></i> 
                         </a>
+                        <a href="#">
+                          <i class="fa-brands fa-linkedin"></i> 
+                      </a>
                  
                 </div>
             </div>
@@ -253,52 +257,75 @@ right: 20px;
 
     <!-- Footer -->
     <footer>
-        <div 
-        style="background-color: #eee;
-         height: 100px;
-         display: flex;
-         align-items: center;
-         margin-top: 15px;">
-          <div class="container" >
-            <p style="font-weight: 600">الشروط و الأحكام</p>
-            <ul style="list-style: disc">
-              <li>
-                <a
-                  style="color: #13385a; text-decoration: none"
-                  href="https://jena.sa/wp-content/uploads/2021/05/users-rights-postal.pdf"
-                  >قواعد حماية حقوق مستفيدي الخدمة البريدية</a
-                >
-              </li>
-            </ul>
-          </div>
+      <div 
+      style="background-color: #eee;
+       height: 100px;
+       display: flex;
+       align-items: center;
+       margin-top: 15px;">
+        <div class="container" >
+          <p style="font-weight: 600">الشروط و الأحكام</p>
+          <ul style="list-style: disc">
+            <li>
+              <a
+                style="color: #13385a; text-decoration: none"
+                href="https://jena.sa/wp-content/uploads/2021/05/users-rights-postal.pdf"
+                >قواعد حماية حقوق مستفيدي الخدمة البريدية</a
+              >
+            </li>
+          </ul>
         </div>
-        <div class="first-header">
-          <div class="container">
-            <div class="contact-info text-center">
-              <p>
-                السعودية | الهاتف: 456456456 | 456456456 | 456456456 البريد الإلكتروني: test@test.com
-              </p>
-              <p>
-                جميع الحقوق محفوظة &copy; 2022 هاتك إكسبريس
-              </p>
-            </div>
-          </div>
-        </div>
-  
-        <div class="second-header">
-          <div class="container">
+      </div>
+      <div class="first-header">
+        <div class="container">
+          <div class="contact-info ">
+            <p class="text-center">بيانات التواصل</p>
+            <p class="contact-details" style="display: flex; justify-content: center;">
+             <span>
+              <i class="fa-solid fa-phone-flip"></i>
+              000-000-00
+             </span>
+            <span>
+              <i class="fa-solid fa-envelope"></i>
+              test@test.com
+            </span>
+            <div class="footer-social text-center">
+              <a href="#">
+                  <i class="fa-brands fa-facebook"></i> 
+              </a>
+              <a href="#">
+                  <i class="fa-brands fa-twitter"></i> 
+              </a>
+              <a href="#">
+                  <i class="fa-brands fa-youtube"></i> 
+              </a>
+              <a href="#">
+                  <i class="fa-brands fa-linkedin"></i> 
+              </a>
+       
+      </div>
+            </p>
             <p class="text-center">
-              الرقم الموحد 456456456 | Toll Free 456456456
+              جميع الحقوق محفوظة &copy; 2022 هاتك إكسبريس
             </p>
           </div>
         </div>
-      </footer>
+      </div>
+
+      <div class="second-header">
+        <div class="container">
+          <p class="text-center">
+            الرقم الموحد 456456456 | Toll Free 456456456
+          </p>
+        </div>
+      </div>
+    </footer>
 
     <!-- Footer -->
   </body>
 </html>
 
-<script src="scripts.js"></script>
+<script src="scripts/main.js"></script>
 <script
   src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
@@ -310,7 +337,31 @@ right: 20px;
 
 <script>
   let form = document.getElementById('contactForm');
+  let name = document.forms["contactForm"]["name"].value;
+  let phone = document.forms["contactForm"]["phone"].value;
+  let email = document.forms["contactForm"]["email"].value;
+  let nameInput = document.getElementById('name');
+  let phoneInput = document.getElementById('phone');
+  let emailInput = document.getElementById('email');
   
+  nameInput.addEventListener('keydown' , () =>{
+   nameInput.style.borderColor = "#ced4da";
+  })
+  phoneInput.addEventListener('keydown' , () =>{
+    phoneInput.style.borderColor = "#ced4da";
+  })
+  emailInput.addEventListener('keydown' , () =>{
+    emailInput.style.borderColor = "#ced4da";
+  })
+  
+  function validateFrom() {
+  if(name == "" || phone == "" || email == ""){
+   nameInput.style.borderColor = "red";
+   phoneInput.style.borderColor = "red";
+   emailInput.style.borderColor = "red";
+    return false;
+  }
+  }
   $(document).ready(() => {
     $(".form-status").fadeOut();
   })
@@ -322,6 +373,7 @@ right: 20px;
       status.appendChild(span);
       $(".form-status").fadeIn();
       $(".form-status span").fadeOut(3000);
+  
   
   
   }
